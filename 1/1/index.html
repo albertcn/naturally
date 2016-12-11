@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta, title, css-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/naturally/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/naturally/assets/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> 1.1 逻辑 - 自然而然 </title>
+
+    <link href="/naturally/vendor/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/naturally/assets/stylesheets/site.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/naturally/vendor/MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+</head>
+<body>
+<div class="container">
+
+    <div id="header" class="row">
+        <div class="col-xs-5 col-xs-offset-7">
+             <img src="/naturally/assets/images/naturally.png" alt="Naturally">
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="top-title">
+            <a href="/naturally">自然而然</a> / <a href="/naturally/1/1/">第一章 逻辑与自然规则</a> 
+        </div>
+        <hr/>
+        <div class="section-title">
+            1.1 逻辑
+        </div>
+        <hr/>
+        <div class="main-content">
+            <p>一切尽在逻辑。</p>
+            <div class="sub-section-title">
+                1.1.1 逻辑的定义
+            </div>
+            <p>这里所谓的逻辑，就是定义在转化中的完全对等。</p>
+            <p>逻辑可以通过定义和转化，得到新的关系。例如，</p>
+            <p>
+                \begin{align}
+                a \equiv & 1\notag\\ 
+                1 + 2\equiv & 3\notag\\ 
+                \Rightarrow a + 2 = & 3
+                \end{align}
+            </p>
+            <p>当明确了定义，逻辑就是反复地、完整地使用定义。</p>
+            <p>定义中不仅包含了数据对象，也包含了表达数据对象之间关系的规则。</p>
+            <p>例如，定义数据对象 \(i\) ，同时定义了它与 \(-1\) 之间的关系为，</p>
+            <p>
+                \begin{align}
+                i^2 = -1
+                \end{align}
+            </p>
+            <p>根据如上的定义，结合一些其他数学定义，可以得到，</p>
+            <p class="math-medium">
+                \begin{align}
+                i^{3} =& i\times (i^{2}) = i\times (-1) = -i\\
+                i^{4} =& (i^{2})\times (i^{2}) = (-1)\times(-1)=1
+                \end{align}
+            </p>
+            <p>进而的，结合一些其他数学定义， 可以得到一些不那么明显的关系，例如，欧拉公式，</p>
+            <p>
+                \begin{align}
+                e^{ix} = \cos{x} + i\sin{x}
+                \end{align}
+            </p>
+            
+            <div class="sub-section-title">
+                1.1.2 逻辑的实例——康维生命游戏
+            </div>
+
+            <p>下面讨论一个较为复杂的逻辑现象，康维生命游戏。</p>
+            <p>定义“生命”为下图中每一个正方形小块，定义“生”为黑色小块，“死”为白色小块，定义与其共享边或者顶点的小块为其邻居(共八个)，</p>
+
+            <div class="image-wrapper">
+                <img src="/naturally/assets/images/loaf.png" alt="loaf" height='100'>
+                <p>图1.1，康维生命游戏之“面包”</p>
+            </div>
+
+            <p>同时定义这些生命遵循着如下的规则，</p>
+            <p>
+                <ul>
+                    <li>任何活小块，邻居中若小于两个活小块，小块死。（可以引申为因为人太少，孤单死）</li>
+                    <li>任何活小块，邻居中若多于三个活小块，小块死。（可以引申为因为人太多，拥挤死）</li>
+                    <li>任何活小块，邻居中若有两个或三个活小块，小块活到下一代。(可以引申为环境适宜)</li>
+                    <li>任何死小块，邻居若正好三个活小块，变为活小块。（可以引申为繁衍生息）</li>
+                </ul>
+            </p>
+            <p>定义了如上的数据对象和规则，可以证明，在如下的初始设置下，系统一直处于不变的状态，</p>
+
+            <div class="image-wrapper">
+                <img src="/naturally/assets/images/boat.png" alt="loaf" height='100'>
+                <p>图1.2，康维生命游戏之“船”</p>
+            </div>
+
+            <p>而，当初始设置为如下时，</p>
+
+            <div class="image-wrapper mobile-full">
+                <img src="/naturally/assets/images/gun.png" alt="gun"  width="300">
+                <p>图1.3，康维生命游戏之“生命枪”</p>
+            </div>
+
+            <p>可以得到如下的结果，一个可以视作制造“活”生命的机器 (Gosper Glider Gun)，</p>
+            
+            <div class="image-wrapper mobile-full">
+                <img src="/naturally/assets/images/gun.gif" alt="gun gif" width='300'>
+                <p>图1.4，康维生命游戏之“生命枪”动画</p>
+            </div>
+
+            <p>根据上面的生命游戏，</p>
+            <p>
+                <ul>
+                    <li>系统不是因为刚刚定义了，才出现的，而是独立于思考的，是一个逻辑现象。</li>
+                    <li>系统内部不存在时间和空间的概念，引入时空可以更好地理解这个逻辑现象。</li>
+                    <li>系统可以采用不同的规则，也可设置不同的初值。</li>
+                    <li>规则每次都是按照之前的定义反复地、完整地执行。</li>
+                </ul>
+            </p>
+            <p>逻辑无处无在，不变、对等、反复无处不在。</p>
+            
+            <div class="sub-section-title">
+                1.1.3 逻辑的实例——随机
+            </div>
+
+            <p>下面讨论当定义明确，但信息缺失时所产生的现象，随机。</p>
+            <p>假设，把骰子的每个面都看作是完全对等的，那么掷骰子后每个面向上的概率便都是1/6。</p>
+            <p>假设，我们一次掷出十个骰子，然后观察结果。</p>
+            <p>假设，我们最初处于下图中的1点，如果十个骰子掷出了十个六向上，就向右下走，其他的情况都向左下走，</p>
+
+            <div class="image-wrapper mobile-full">
+                <img src="/naturally/assets/images/tree.gif" alt="tree gif" width='400'>
+                <p>图1.5, 随机现象树形举例示意图</p>
+            </div>
+
+            <p>那么，可以得到如下一些结论，</p>
+            <p>
+                <ul>
+                    <li>基本可以认为，我们会停止在位置16（概率约为\(99.999995\%\)）。</li>
+                    <li>完全肯定的是，我们有可能出现在13至25任何一个点上（概率为\(100\%\)）。</li>
+                    <li>假设，我们第一次掷出了十个六，站在了3的位置（概率约为\(0.000002\%\)），还是基本可以认为，我们会停止在24这个点（概率约为\(99.999997\%\)），而不是其他四个点。</li>
+                </ul>
+            </p>
+            <p>随机的特别之处在于，既可以保证尝试所有的可能性，又能确保信息传递的稳定。</p>
+
+        </div>
+         <hr/>
+         <div class="page-nav">
+            <a href="/naturally/">
+                <div class="btn btn-outline-cyan-light">引子</div>
+            </a>
+
+            <a href="/naturally/1/2">
+                <div class="btn btn-outline-cyan-light">下一节</div>
+            </a>
+         </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="logo text-center">
+            <img src="/naturally/assets/images/logo.png" alt="logo" width="200">
+        </div>
+        2014 &copy; albert innovation
+    </div>
+
+</div>
+<!-- Javascript -->
+<script src="/naturally/vendor/javascripts/jquery.js"></script>
+<script src="/naturally/vendor/javascripts/bootstrap.min.js"></script>
+</body>
+</html>

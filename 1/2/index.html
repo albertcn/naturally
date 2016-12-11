@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta, title, css-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/naturally/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/naturally/assets/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> 1.2 数学 - 自然而然 </title>
+
+    <link href="/naturally/vendor/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/naturally/assets/stylesheets/site.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/naturally/vendor/MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+</head>
+<body>
+<div class="container">
+
+    <div id="header" class="row">
+        <div class="col-xs-5 col-xs-offset-7">
+             <img src="/naturally/assets/images/naturally.png" alt="Naturally">
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="top-title">
+            <a href="/naturally/">自然而然</a> / <a href="/naturally/1/1/">第一章 逻辑与自然规则</a> 
+        </div>
+        <hr/>
+        <div class="section-title">
+            1.2 数学
+        </div>
+        <hr/>
+        <div class="main-content">
+
+            <div class="sub-section-title">
+                1.2.1 数学的定义
+            </div>
+
+            <p>数学是定义明确且自洽的逻辑。</p>
+            <p>数学在最基本的定义之上，逐步增加新的数学对象和数学规则，并保持结构的自洽。</p>
+            <p>数学对象就是前文所提到的数据对象。数学规则就是前文所提到的表达数据对象之间关系的规则。</p>
+            <p>自洽是指，结构内从一个定义出发不能得到与之不一致的新定义。例如，</p>
+            <p>
+                \begin{align}
+                a \equiv & 1\notag\\ 
+                1 + 2\equiv & 3\notag\\ 
+                1 + a \equiv & 3
+                \end{align}
+            </p>
+            <p>可以得到， \(a = 2\) ，这与之前定义的 \(a \equiv 1\) 并不一致。那么，这个结构就不是自洽的。</p>
+            
+            <div class="sub-section-title">
+                1.2.2 数学的实例——布林逻辑代数
+            </div>
+
+            <p>定义，任意一个包含任意信息的数学对象为\(1\)。</p>
+            <p>在只定义了\(1\)的结构内，无论定义任何数学规则，所得到的结果都会是\(1\)，亦即，</p>
+            <p class="math-center">对任意数学规则 \(f\) , 总有 \(f(1) = 1\)</p>
+            <p>定义，任意与\(1\)信息不完全一致的数学对象为\(0\)。</p>
+            <p>在只定义了\(0\)和\(1\)的结构内，</p>
+            <p>如果数学规则作用在一个数学对象上，那么，可以定义有限的几种规则，亦即，</p>
+            <p>
+                \begin{align}
+                f(0)=0,\, f(1)=0\\
+                f(0)=0,\, f(1)=1\\
+                f(0)=1,\, f(1)=0\\
+                f(0)=1,\, f(1)=1
+                \end{align}
+            </p>
+            <p>如果数学规则作用在两个数学对象上， 那么，可以定义有限的几种规则，亦即，</p>
+            <p class="math-small">
+                \begin{align}
+                f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=0,\, f(1,\, 1)=0\\
+                f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=0,\, f(1,\, 1)=1\\
+                f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=1,\, f(1,\, 1)=0\\
+                f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=1,\, f(1,\, 1)=1\\
+                \\
+                f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=0,\, f(1,\, 1)=0\\
+                f(0,\, 0)=0,\, f(0,\, 1)=1,\,f(1,\, 0)=0,\, f(1,\, 1)=1\\
+                f(0,\, 0)=1,\, f(0,\, 1)=0,\,f(1,\, 0)=1,\, f(1,\, 1)=0\\
+                f(0,\, 0)=1,\, f(0,\, 1)=1,\,f(1,\, 0)=1,\, f(1,\, 1)=1\\
+                \\
+                f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=0,\, f(1,\, 1)=0\\
+                f(0,\, 0)=0,\, f(0,\, 1)=1,\,f(1,\, 0)=0,\, f(1,\, 1)=1\\
+                f(0,\, 0)=1,\, f(0,\, 1)=0,\,f(1,\, 0)=1,\, f(1,\, 1)=0\\
+                f(0,\, 0)=1,\, f(0,\, 1)=1,\,f(1,\, 0)=1,\, f(1,\, 1)=1\\
+                \\
+                f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=0,\, f(1,\, 1)=0\\
+                f(0,\, 0)=0,\, f(0,\, 1)=1,\,f(1,\, 0)=0,\, f(1,\, 1)=1\\
+                f(0,\, 0)=1,\, f(0,\, 1)=0,\,f(1,\, 0)=1,\, f(1,\, 1)=0\\
+                f(0,\, 0)=1,\, f(0,\, 1)=1,\,f(1,\, 0)=1,\, f(1,\, 1)=1\\
+                \end{align}
+            </p>
+            <p>如果定义\(1\)为真，\(0\)为假，定义真与假之间服从如下的规则，</p>
+            <p class="math-small">
+                \begin{align}
+                &f(0)=0,\, f(1)=0\\
+                &g(0,\, 0)=0,\, g(0,\, 1)=0,\, g(1,\, 0)=0,\, g(1,\, 1)=1\\
+                &h(0,\, 0)=0,\, h(0,\, 1)=1,\, h(1,\, 0)=1,\, h(1,\, 1)=1\\
+                \end{align}
+            </p>
+            <p>那么，就定义了布林逻辑代数。</p>
+            <p>按照人为规定， \(f\)即非，\(g\)即或，\(h\)即且。布林逻辑代数是自洽的。</p>
+            <p>根据上述定义， 进而得，可以得到一些不那么明显的关系，例如，德摩根定律，</p>
+            <p class="math-medium">
+                \begin{align}
+                f(g(A,\, B)) &= h(g(A),\, g(B))\\
+                \\
+                f(h(A, B)) &= g(f(A),\, f(B))
+                \end{align}
+            </p>
+            <p>在布林逻辑函数之上，增加新的对象和规则，便可得到如图1.6所示的一些其他数学结构。</p>
+
+            <div class="image-wrapper mobile-full">
+                <img src="/naturally/assets/svg/math.svg" alt="math svg" width="80%">
+                <p>图1.6 部分数学结构间的关系简图</p>
+            </div>
+
+        </div>
+         <hr/>
+         <div class="page-nav">
+            <a href="/naturally/1/1/">
+                <div class="btn btn-outline-cyan-light">上一节</div>
+            </a>
+
+            <a href="/naturally/1/3/">
+                <div class="btn btn-outline-cyan-light">下一节</div>
+            </a>
+         </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="logo text-center">
+            <img src="/naturally/assets/images/logo.png" alt="logo" width="200">
+        </div>
+        2014 &copy; albert innovation
+    </div>
+
+</div>
+<!-- Javascript -->
+<script src="/naturally/vendor/javascripts/jquery.js"></script>
+<script src="/naturally/vendor/javascripts/bootstrap.min.js"></script>
+</body>
+</html>

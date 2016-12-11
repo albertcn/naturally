@@ -1,0 +1,216 @@
+// Variables and mixins
+@import "variables";
+@import "mixins";
+
+@import "modules/buttons";
+
+body {
+    background-color: $cyan-bg;
+    font-family: 'Open Sans', Arial, 'Microsoft YaHei', 微软雅黑, 'WenQuanYi Micro Hei', sans-serif;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.8;
+
+    @include media(phone) {
+		font-size: 18px;
+	}
+    
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	@include transition(.25s);
+
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+		text-decoration: none;
+	}
+
+	&:focus {
+		@include tab-focus();
+	}
+
+	&.underline {
+		text-decoration: underline;
+	}
+
+	i {
+		margin-right: $v-sm;
+	}
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed $hr-border;
+  
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+ol {
+	li {
+		margin-top: 10px; 
+	}
+}
+
+@include media(phone) {
+
+	.math-smaller {
+		font-size:9px;
+	}
+
+	.math-small {
+		font-size:10px;
+	}
+
+	.math-medium {
+		font-size: 14px;
+	}
+
+	.mobile-full img {
+		width: 100%
+	}
+}
+
+.container {
+	max-width: 920px;
+	margin-top: $xl;
+	margin-bottom: $xl;
+
+	@include media(phone) {
+    	padding: 0;
+    }
+}
+
+#header {
+	margin-right: 0;
+
+	@include media(phone) {
+		img {
+			width: 100px;
+		}
+	}
+}
+
+#content {
+	background-color: $white;
+	margin-top: $lg;
+	margin-bottom: $lg;
+	padding: 30px 40px;
+	border: 1px solid #eee;
+	border-radius: 6px;
+
+	@include media(phone) {
+    	padding: 20px 20px;
+    	border-radius: 0;
+    }
+
+    .top-title {
+
+    	font-size: 14px;
+		
+		a:first-child {
+			margin-right: 5px;
+		}
+
+    	a:nth-child(2n) {
+    		margin-left: 5px;
+    	}
+    }
+
+	.section-title {
+		font-size: 36px;
+		line-height: 1.5;
+
+		&.small-title {
+			font-size: 22px
+		}
+
+		&.smaller-title {
+			font-size: 18px
+		}
+	}
+
+	.sub-section-title {
+		font-size: 18px;
+		font-weight: bold;
+		margin: 20px 0;
+	}
+
+	.author {
+
+	    overflow: hidden;
+	    margin-bottom: 10px;
+
+	    ul {
+	    	float: left;
+		    list-style: none;
+		    vertical-align: baseline;
+		    padding: 3px 0;
+
+		    li {
+		    	margin: 3px 5px;
+			    float: left;
+			    content: 'd';
+
+			    &:nth-child(2n):before, &:nth-child(3n):before {
+			    	content: "•";
+   		 			padding: 0 10px 0 0;
+			    }
+
+			    @include media(phone) {
+			    	&:nth-child(2n) {
+			    		display: none;
+			    	}
+			    }
+		    }
+	    }
+	}
+
+	.main-content {
+		padding-left: 5px;
+
+		.image-wrapper {
+			text-align: center;
+			margin: 20px;
+
+			p {
+				margin: 10px 0;
+			}
+		}
+
+		.math-center {
+			text-align: center;
+			margin: 20px 0;
+		}
+
+		.final-words {
+			font-size: 12px;
+			font-color: $gray-lighter-1;
+
+			margin-top: 60px;
+		}
+	}
+
+	.page-nav {
+		.btn {
+			margin-right: 10px;
+		}
+	}
+}
+
+.logo {
+	margin-bottom: 30px;
+}
+
+.footer {
+	margin-left: 15px;
+	font-size: 12px;
+	color: $gray-light;
+}
+
+
+
