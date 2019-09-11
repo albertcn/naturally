@@ -58,5 +58,16 @@
 <!-- Javascript -->
 <script src="/naturally/vendor/javascripts/jquery.js"></script>
 <script src="/naturally/vendor/javascripts/bootstrap.min.js"></script>
+
+<!-- katex -->
+<link rel="stylesheet" href="/naturally/assets/katex.min.css">
+<script src="/naturally/assets/katex.min.css"></script>
+<script type="text/javascript">
+  var math = document.getElementsByClassName('math');
+  for (var i = 0; i < math.length; i++) {
+    katex.render(math[i].innerText, math[i]);
+  }
+</script>
+
 </body>
 </html>

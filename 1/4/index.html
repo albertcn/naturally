@@ -26,7 +26,7 @@
 
     <div id="content">
         <div class="top-title">
-            <a href="/naturally/">自然而然</a> / <a href="/naturally/1/1/">第一章 逻辑与自然规则</a> 
+            <a href="/naturally/">自然而然</a> / <a href="/naturally/1/1/">第一章 逻辑与自然规则</a>
         </div>
         <hr/>
         <div class="section-title small-title">
@@ -73,5 +73,16 @@
 <!-- Javascript -->
 <script src="/naturally/vendor/javascripts/jquery.js"></script>
 <script src="/naturally/vendor/javascripts/bootstrap.min.js"></script>
+
+<!-- katex -->
+<link rel="stylesheet" href="/naturally/assets/katex.min.css">
+<script src="/naturally/assets/katex.min.css"></script>
+<script type="text/javascript">
+  var math = document.getElementsByClassName('math');
+  for (var i = 0; i < math.length; i++) {
+    katex.render(math[i].innerText, math[i]);
+  }
+</script>
+
 </body>
 </html>

@@ -26,7 +26,7 @@
 
     <div id="content">
         <div class="top-title">
-            <a href="/naturally/">自然而然</a> / <a href="/naturally/1/1/">第一章 逻辑与自然规则</a> 
+            <a href="/naturally/">自然而然</a> / <a href="/naturally/1/1/">第一章 逻辑与自然规则</a>
         </div>
         <hr/>
         <div class="section-title">
@@ -43,26 +43,26 @@
             <p>数学在最基本的定义之上，逐步增加新的数学对象和数学规则，并保持结构的自洽。</p>
             <p>数学对象就是前文所提到的数据对象。数学规则就是前文所提到的表达数据对象之间关系的规则。</p>
             <p>自洽是指，结构内从一个定义出发不能得到与之不一致的新定义。例如，</p>
-            <p>
+            <p class='math'>
                 \begin{align}
-                a \equiv & 1\notag\\ 
-                1 + 2\equiv & 3\notag\\ 
+                a \equiv & 1\notag\\
+                1 + 2\equiv & 3\notag\\
                 1 + a \equiv & 3
                 \end{align}
             </p>
-            <p>可以得到， \(a = 2\) ，这与之前定义的 \(a \equiv 1\) 并不一致。那么，这个结构就不是自洽的。</p>
-            
+            <p>可以得到， <span class='math'>a = 2</span> ，这与之前定义的 <span class='math'>a \equiv 1</span> 并不一致。那么，这个结构就不是自洽的。</p>
+
             <div class="sub-section-title">
                 1.2.2 数学的实例——布林逻辑代数
             </div>
 
-            <p>定义，任意一个包含任意信息的数学对象为\(1\)。</p>
-            <p>在只定义了\(1\)的结构内，无论定义任何数学规则，所得到的结果都会是\(1\)，亦即，</p>
-            <p class="math-center">对任意数学规则 \(f\) , 总有 \(f(1) = 1\)</p>
-            <p>定义，任意与\(1\)信息不完全一致的数学对象为\(0\)。</p>
-            <p>在只定义了\(0\)和\(1\)的结构内，</p>
+            <p>定义，任意一个包含任意信息的数学对象为 <span class='math'>1</span>。</p>
+            <p>在只定义了\(1\)的结构内，无论定义任何数学规则，所得到的结果都会是<span class='math'>1</span>，亦即，</p>
+            <p class="math math-center">对任意数学规则 <span class='math'>f</span>, 总有 <span class='math'>f(1) = 1</span></p>
+            <p>定义，任意与\(1\)信息不完全一致的数学对象为 <span class='math'>0</span>。</p>
+            <p>在只定义了<span class='math'>0</span>和<span class='math'>1</span>的结构内，</p>
             <p>如果数学规则作用在一个数学对象上，那么，可以定义有限的几种规则，亦即，</p>
-            <p>
+            <p class='math'>
                 \begin{align}
                 f(0)=0,\, f(1)=0\\
                 f(0)=0,\, f(1)=1\\
@@ -71,7 +71,7 @@
                 \end{align}
             </p>
             <p>如果数学规则作用在两个数学对象上， 那么，可以定义有限的几种规则，亦即，</p>
-            <p class="math-small">
+            <p class="math math-small">
                 \begin{align}
                 f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=0,\, f(1,\, 1)=0\\
                 f(0,\, 0)=0,\, f(0,\, 1)=0,\,f(1,\, 0)=0,\, f(1,\, 1)=1\\
@@ -94,8 +94,8 @@
                 f(0,\, 0)=1,\, f(0,\, 1)=1,\,f(1,\, 0)=1,\, f(1,\, 1)=1\\
                 \end{align}
             </p>
-            <p>如果定义\(1\)为真，\(0\)为假，定义真与假之间服从如下的规则，</p>
-            <p class="math-small">
+            <p>如果定义<span class='math'>1</span>为真，<span class='math'>0</span>为假，定义真与假之间服从如下的规则，</p>
+            <p class="math math-small">
                 \begin{align}
                 &f(0)=0,\, f(1)=0\\
                 &g(0,\, 0)=0,\, g(0,\, 1)=0,\, g(1,\, 0)=0,\, g(1,\, 1)=1\\
@@ -103,9 +103,9 @@
                 \end{align}
             </p>
             <p>那么，就定义了布林逻辑代数。</p>
-            <p>按照人为规定， \(f\)即非，\(g\)即或，\(h\)即且。布林逻辑代数是自洽的。</p>
+            <p>按照人为规定， <span class='math'>f</span>即非，<span class='math'>g</span>即或，<span class='math'>h</span>即且。布林逻辑代数是自洽的。</p>
             <p>根据上述定义， 进而得，可以得到一些不那么明显的关系，例如，德摩根定律，</p>
-            <p class="math-medium">
+            <p class="math math-medium">
                 \begin{align}
                 f(g(A,\, B)) &= h(g(A),\, g(B))\\
                 \\
@@ -144,5 +144,16 @@
 <!-- Javascript -->
 <script src="/naturally/vendor/javascripts/jquery.js"></script>
 <script src="/naturally/vendor/javascripts/bootstrap.min.js"></script>
+
+<!-- katex -->
+<link rel="stylesheet" href="/naturally/assets/katex.min.css">
+<script src="/naturally/assets/katex.min.css"></script>
+<script type="text/javascript">
+  var math = document.getElementsByClassName('math');
+  for (var i = 0; i < math.length; i++) {
+    katex.render(math[i].innerText, math[i]);
+  }
+</script>
+
 </body>
 </html>
